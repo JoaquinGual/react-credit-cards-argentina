@@ -2,17 +2,19 @@
  * Provides configuration for card types not supported by `credit-card-types`
  */
 
-export const dankort = {
-  niceType: "Dankort",
-  type: "dankort",
-  patterns: [5019],
-  gaps: [4, 8, 12],
-  lengths: [16],
-  code: {
-    name: "CVC",
-    size: 3,
-  },
-};
+import { CreditCardType } from "credit-card-type/dist/types";
+
+// export const dankort = {
+//   niceType: "Dankort",
+//   type: "dankort",
+//   patterns: [5019],
+//   gaps: [4, 8, 12],
+//   lengths: [16],
+//   code: {
+//     name: "CVC",
+//     size: 3,
+//   },
+// };
 
 export const laser = {
   niceType: "Laser",
@@ -37,3 +39,41 @@ export const visaElectron = {
     size: 3,
   },
 };
+
+export const naranjaX = {
+  niceType: "Naranja X",
+  type: "naranja-x",
+  patterns: [589562],
+  gaps: [4, 8, 12],
+  lengths: [16],
+  code: {
+    name: "CVC",
+    size: 3,
+  },
+} as CreditCardType
+
+export const galiciaMaster = {
+  niceType: "Galicia Master",
+  type: "galicia-master",
+  patterns: [549427],
+  gaps: [4, 8, 12],
+  lengths: [16],
+  code: {
+    name: "CVC",
+    size: 3,
+  },
+} as CreditCardType
+
+export const galiciaVisa = {
+  niceType: "Galicia Visa",
+  type: "galicia-visa",
+  patterns: [454640],
+  gaps: [4, 8, 12],
+  lengths: [16],
+  code: {
+    name: "CVC",
+    size: 3,
+  },
+} as CreditCardType
+
+

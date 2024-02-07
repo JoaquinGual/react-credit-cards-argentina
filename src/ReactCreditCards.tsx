@@ -61,7 +61,6 @@ export function ReactCreditCards(props: ReactCreditCardsProps) {
 
     if (number) {
       const validatedIssuer = getCardType(number);
-
       if (validCardTypes.includes(validatedIssuer as any)) {
         updatedIssuer = validatedIssuer;
       }
@@ -76,11 +75,11 @@ export function ReactCreditCards(props: ReactCreditCardsProps) {
     } else if (["hipercard", "mastercard", "visa"].includes(updatedIssuer)) {
       maxLength = 19;
     }
-
     return {
       issuer: updatedIssuer,
       maxLength,
     };
+    
   }, [number, validCardTypes]);
 
   const cardIssuer = React.useMemo(

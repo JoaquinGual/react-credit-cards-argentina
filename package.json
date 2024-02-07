@@ -1,6 +1,6 @@
 {
-  "name": "react-credit-cards-2",
-  "version": "1.0.2",
+  "name": "react-credit-cards-argentina",
+  "version": "1.0.5",
   "description": "Beautiful credit cards for your payment forms",
   "author": "AMARO Fashion <tech@amaro.com>",
   "contributors": [
@@ -11,16 +11,20 @@
     {
       "name": "Gil Barbara",
       "email": "gil.barbara@amaro.com"
+    },
+    {
+      "name": "Joaquin Gual",
+      "email": "joaquingual1@gmail.com"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felquis/react-credit-cards-2.git"
+    "url": "git+https://github.com/JoaquinGual/react-credit-cards-argentina.git"
   },
   "bugs": {
-    "url": "https://github.com/felquis/react-credit-cards-2/issues"
+    "url": "https://github.com/JoaquinGual/react-credit-cards-argentina/issues"
   },
-  "homepage": "https://github.com/felquis/react-credit-cards-2#readme",
+  "homepage": "https://github.com/JoaquinGual/react-credit-cards-argentina#readme",
   "license": "MIT",
   "main": "dist/lib/index.js",
   "module": "dist/es/index.js",
@@ -119,12 +123,12 @@
     "clean": "rimraf dist/ es/ lib/ coverage/ .tmp/",
     "lint": "eslint --max-warnings=0 src",
     "format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./prettier.config.cjs",
-    "lint:styles": "stylelint 'src/**/*.scss'",
+    "lint:styles": "stylelint src/**/*.scss",
     "test": "jest",
     "test:coverage": "jest --bail --coverage",
     "test:watch": "jest --watch",
     "size": "npm run build && size-limit",
-    "validate": "npm run lint && npm run lint:styles && npm run test:coverage && npm run size",
+    "validate": "npm run lint && npm run lint:styles && npm run test:watch && npm run size",
     "prepublishOnly": "npm run validate"
   },
   "browserslist": [

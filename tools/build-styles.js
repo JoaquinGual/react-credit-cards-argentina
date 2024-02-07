@@ -1,25 +1,40 @@
 /*eslint-disable no-var, vars-on-top, no-console */
 const { promisify } = require("util");
 const { exec } = require("child_process");
+const fs = require("fs");
 
 const run = promisify(exec);
 
-run("rm -rf .tmp/")
+const removeDirectory = () => {
+  const tmpDir = ".tmp";
+
+  // Verificar si el directorio existe antes de intentar eliminarlo
+  if (fs.existsSync(tmpDir)) {
+    
+    // Usar rmdir en Windows, rm -rf en otras plataformas
+    const removeCommand = process.platform === "win32" ? `rmdir /s /q ${tmpDir}` : `rm -rf ${tmpDir}`;
+    return run(removeCommand);
+  } else {
+    console.log(`${tmpDir} no existe. No es necesario eliminarlo.`);
+    return Promise.resolve();
+  }
+};
+
+removeDirectory()
   .then(() => run("sass src/styles.scss .tmp/styles.css"))
   .then(() =>
     run("postcss .tmp/styles.css --use autoprefixer --no-map -d .tmp/")
   )
-  .then(() => run("mv .tmp/styles.css .tmp/styles-compiled.css"))
-  // .then(() => run("mkdir -p dist/es dist/lib"))
+  .then(() => run("move .tmp\\styles.css .tmp\\styles-compiled.css"))
   .then(() =>
     run(
-      "cp .tmp/styles-compiled.css dist/es/ && cp .tmp/styles-compiled.css dist/lib/"
+      "copy .tmp\\styles-compiled.css dist\\es\\ && copy .tmp\\styles-compiled.css dist\\lib\\"
     )
   )
   .then(() =>
-    run("cp src/styles.scss dist/es/ && cp src/styles.scss dist/lib/")
+    run("copy src\\styles.scss dist\\es\\ && copy src\\styles.scss dist\\lib\\")
   )
-  .then(() => console.log("✔ Styles have been build"))
+  .then(() => console.log("✔ Styles have been built"))
   .catch((err) => {
     console.error(err);
   });

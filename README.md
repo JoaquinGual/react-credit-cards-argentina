@@ -1,8 +1,8 @@
-# React Credit Cards 2 - Community Package
+# React Credit Cards Argentina - Community Package
 
 > This repository is a hard-fork from the original [react-credit-cards](https://github.com/amaroteam/react-credit-cards) package. The main purpose is to update dependencies, make it usable with React 17 and 18 and clear installation warnings.
 
-[![NPM](https://img.shields.io/npm/v/react-credit-cards-2)](https://www.npmjs.com/package/react-credit-cards-2) [![BundleSize](https://img.shields.io/bundlephobia/min/react-credit-cards-2)](https://bundlephobia.com/package/react-credit-cards-2) [![Travis](https://travis-ci.org/amarofashion/react-credit-cards.svg?branch=master)](https://travis-ci.org/amarofashion/react-credit-cards) [![Maintainability](https://api.codeclimate.com/v1/badges/bb0aa1a6b782c3845f6a/maintainability)](https://codeclimate.com/github/amarofashion/react-credit-cards/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/bb0aa1a6b782c3845f6a/test_coverage)](https://codeclimate.com/github/amarofashion/react-credit-cards/test_coverage)
+[![NPM](https://img.shields.io/npm/v/react-credit-cards-argentina)](https://www.npmjs.com/package/react-credit-cards-argentina) [![BundleSize](https://img.shields.io/bundlephobia/min/react-credit-cards-argentina)](https://bundlephobia.com/package/react-credit-cards-argentina) [![Travis](https://travis-ci.org/amarofashion/react-credit-cards.svg?branch=master)](https://travis-ci.org/amarofashion/react-credit-cards) [![Maintainability](https://api.codeclimate.com/v1/badges/bb0aa1a6b782c3845f6a/maintainability)](https://codeclimate.com/github/amarofashion/react-credit-cards/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/bb0aa1a6b782c3845f6a/test_coverage)](https://codeclimate.com/github/amarofashion/react-credit-cards/test_coverage)
 
 A slick credit card component for React.
 
@@ -13,14 +13,14 @@ A slick credit card component for React.
 ### Install
 
 ```
-npm install --save react-credit-cards-2
+npm install  react-credit-cards-argentina
 ```
 
 ### Usage
 
 ```tsx
 import React, { useState } from 'react';
-import Cards from 'react-credit-cards-2';
+import Cards from 'react-credit-cards-argentina';
 
 const PaymentForm = () => {
   const [state, setState] = useState({
@@ -68,7 +68,7 @@ const PaymentForm = () => {
 export default PaymentForm;
 ```
 
-If you are using SASS, import the CSS `react-credit-cards-2/dist/lib/styles.scss` 
+If you are using SASS, import the CSS `react-credit-cards-argentina/dist/lib/styles.scss` 
 
 Or you can import the CSS:  
 `import 'react-credit-cards-2/dist/es/styles-compiled.css';`
@@ -76,7 +76,7 @@ Or you can import the CSS:
 ### Features
 
 - We support all credit card issuers available in [credit-card-type](https://github.com/braintree/credit-card-type) plus
- Dankort, Laser, and Visa Electron.
+  Laser, Visa Electron, Naranja X, Galicia Mastercard (standard), Galicia Visa (standard)
 
 ## Props
 

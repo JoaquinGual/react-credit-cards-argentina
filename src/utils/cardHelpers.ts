@@ -1,7 +1,7 @@
 import creditCardType, { types as cardTypes } from "credit-card-type";
 import luhn from "luhn";
 
-import { dankort, laser, visaElectron } from "./cardTypes";
+import {  galiciaMaster, galiciaVisa, laser, naranjaX, visaElectron } from "./cardTypes";
 
 /**
  * Check if a credit card number is valid using the Luhn algorithm
@@ -50,14 +50,22 @@ export const setInitialValidCardTypes = () => {
     patterns: [384100, 384140, 384160, 606282, 637095, 637568],
   });
 
-  creditCardType.addCard(dankort);
+  // creditCardType.addCard(dankort);
   creditCardType.addCard(laser);
   creditCardType.addCard(visaElectron);
+  creditCardType.addCard(naranjaX);
+  creditCardType.addCard(galiciaMaster);
+  creditCardType.addCard(galiciaVisa);
+  
 
   return Object.values(cardTypes).concat([
-    "dankort",
+    // "dankort",
+    "naranja-x",
     "laser",
     "visa-electron",
+    "galicia-master",
+    "galicia-visa"
+    
   ] as any);
 };
 
