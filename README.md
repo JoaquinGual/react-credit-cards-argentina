@@ -6,7 +6,7 @@
 
 A slick credit card component for React.
 
-![demo](https://raw.githubusercontent.com/felquis/react-credit-cards-2/master/docs/media/rccs.gif)
+![demo](https://raw.githubusercontent.com/felquis/react-credit-cards-argentina/master/docs/media/rccs.gif)
 
 [Demo - CodeSandbox](https://ovvwzkzry9.codesandbox.io/)
 
@@ -71,7 +71,7 @@ export default PaymentForm;
 If you are using SASS, import the CSS `react-credit-cards-argentina/dist/lib/styles.scss` 
 
 Or you can import the CSS:  
-`import 'react-credit-cards-2/dist/es/styles-compiled.css';`
+`import 'react-credit-cards-argentina/dist/es/styles-compiled.css';`
 
 ### Features
 
@@ -143,9 +143,9 @@ Here's how you can get started developing locally:
 
 1. Clone this repo and link it to your global `node_modules`:
 
-      $ git clone https://github.com/felquis/react-credit-cards-2.git
+      $ git clone https://github.com/JoaquinGual/react-credit-cards-argentina.git
 
-      $ cd react-credit-cards-2
+      $ cd react-credit-cards-argentina
 
       $ npm install
 
