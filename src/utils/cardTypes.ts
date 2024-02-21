@@ -52,6 +52,42 @@ export const naranjaX = {
   },
 } as CreditCardType
 
+export const NaranjaVisa = {
+  niceType: "Naranja Visa",
+  type: "naranja-visa",
+  patterns: [402918],
+  gaps: [4, 8, 12],
+  lengths: [16],
+  code: {
+    name: "CVC",
+    size: 3,
+  },
+} as CreditCardType
+
+export const NaranjaMaster = {
+  niceType: "Naranja Master",
+  type: "naranja-master",
+  patterns: [527572],
+  gaps: [4, 8, 12],
+  lengths: [16],
+  code: {
+    name: "CVC",
+    size: 3,
+  },
+} as CreditCardType
+
+export const NaranjaAmex = {
+  niceType: "Naranja Amex",
+  type: "naranja-amex",
+  patterns: [377798],
+  gaps: [4, 10],
+  lengths: [15],
+  code: {
+    name: "CVC",
+    size: 3,
+  },
+} as CreditCardType
+
 export const galiciaMaster = {
   niceType: "Galicia Master",
   type: "galicia-master",

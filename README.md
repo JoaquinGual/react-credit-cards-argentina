@@ -6,7 +6,7 @@
 
 A slick credit card component for React.
 
-![demo](https://raw.githubusercontent.com/felquis/react-credit-cards-argentina/master/docs/media/rccs.gif)
+![demo](https://raw.githubusercontent.com/JoaquinGual/react-credit-cards-argentina/master/docs/media/rccs.gif)
 
 [Demo - CodeSandbox](https://ovvwzkzry9.codesandbox.io/)
 
@@ -76,7 +76,7 @@ Or you can import the CSS:
 ### Features
 
 - We support all credit card issuers available in [credit-card-type](https://github.com/braintree/credit-card-type) plus
-  Laser, Visa Electron, Naranja X, Galicia Mastercard (standard), Galicia Visa (standard)
+  Laser, Visa Electron, Naranja X, Naranja X (Visa, MasterCard, American Express), Galicia Mastercard (standard), Galicia Visa (standard)
 
 ## Props
 

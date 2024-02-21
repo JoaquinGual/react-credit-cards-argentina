@@ -373,6 +373,63 @@ describe("ReactCreditCards", () => {
     expect(mockCallback.mock.calls[0][1]).toEqual(true);
   });
 
+  it("should handle new number props (Naranja Visa)", () => {
+    wrapper.setProps({
+      number: "4029180345312655",
+      focused: "number",
+    });
+
+    expect(
+      wrapper.find(".rccs__card").hasClass("rccs__card--naranja-visa")
+    ).toBe(true);
+    expect(wrapper.find(".rccs__number").text()).toBe("4029 1803 4531 2655");
+    expect(wrapper.find(".rccs__number").hasClass("rccs--focused")).toBe(true);
+
+    expect(mockCallback.mock.calls[0][0]).toEqual({
+      maxLength: 16,
+      issuer: "naranja-visa",
+    });
+    expect(mockCallback.mock.calls[0][1]).toEqual(true);
+  });
+
+  it("should handle new number props (Naranja Master)", () => {
+    wrapper.setProps({
+      number: "5275720623387214",
+      focused: "number",
+    });
+
+    expect(
+      wrapper.find(".rccs__card").hasClass("rccs__card--naranja-master")
+    ).toBe(true);
+    expect(wrapper.find(".rccs__number").text()).toBe("5275 7206 2338 7214");
+    expect(wrapper.find(".rccs__number").hasClass("rccs--focused")).toBe(true);
+
+    expect(mockCallback.mock.calls[0][0]).toEqual({
+      maxLength: 16,
+      issuer: "naranja-master",
+    });
+    expect(mockCallback.mock.calls[0][1]).toEqual(true);
+  });
+
+  it("should handle new number props (Naranja X American Express)", () => {
+    wrapper.setProps({
+      number: "377798846880205",
+      focused: "number",
+    });
+
+    expect(
+      wrapper.find(".rccs__card").hasClass("rccs__card--naranja-amex")
+    ).toBe(true);
+    expect(wrapper.find(".rccs__number").text()).toBe("3777 988468 80205");
+    expect(wrapper.find(".rccs__number").hasClass("rccs--focused")).toBe(true);
+
+    expect(mockCallback.mock.calls[0][0]).toEqual({
+      maxLength: 15,
+      issuer: "naranja-amex",
+    });
+    expect(mockCallback.mock.calls[0][1]).toEqual(true);
+  });
+
   it("should handle new number props (Visa Electron)", () => {
     wrapper.setProps({
       number: "4508269706217171",

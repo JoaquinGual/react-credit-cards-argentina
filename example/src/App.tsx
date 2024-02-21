@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>React-Credit-Cards-2 Testing</h1>
+      <h1>React-Credit-Cards-Argentina Testing</h1>
       <ReactCreditCards
         cvc={cvc}
         name={name}

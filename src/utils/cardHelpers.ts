@@ -1,7 +1,7 @@
 import creditCardType, { types as cardTypes } from "credit-card-type";
 import luhn from "luhn";
 
-import {  galiciaMaster, galiciaVisa, laser, naranjaX, visaElectron } from "./cardTypes";
+import {  NaranjaAmex, NaranjaMaster, NaranjaVisa, galiciaMaster, galiciaVisa, laser, naranjaX, visaElectron } from "./cardTypes";
 
 /**
  * Check if a credit card number is valid using the Luhn algorithm
@@ -54,13 +54,20 @@ export const setInitialValidCardTypes = () => {
   creditCardType.addCard(laser);
   creditCardType.addCard(visaElectron);
   creditCardType.addCard(naranjaX);
+  creditCardType.addCard(NaranjaVisa);
+  creditCardType.addCard(NaranjaMaster);
+  creditCardType.addCard(NaranjaAmex);
   creditCardType.addCard(galiciaMaster);
   creditCardType.addCard(galiciaVisa);
+
   
 
   return Object.values(cardTypes).concat([
     // "dankort",
     "naranja-x",
+    "naranja-visa",
+    "naranja-master",
+    "naranja-amex",
     "laser",
     "visa-electron",
     "galicia-master",
@@ -73,7 +80,7 @@ export const setInitialValidCardTypes = () => {
  * Provides a map of patterns to match for some card types
  */
 export const cardTypesMap = {
-  amex: ["amex", "americanexpress", "american-express"],
+  amex: ["amex", "americanexpress", "american-express", "naranja-amex"],
   dinersclub: ["diners", "dinersclub", "diners-club"],
   visaelectron: ["visaelectron", "visa-electron"],
 };
